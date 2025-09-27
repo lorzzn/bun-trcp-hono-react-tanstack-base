@@ -1,0 +1,723 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Prisma tRPC API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/trpc/todo/aggregate": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.aggregate",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "orderBy": [
+                        {
+                          "id": "asc"
+                        }
+                      ],
+                      "take": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/createMany": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.createMany",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "data": [
+                        {
+                          "content": "content"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/createManyAndReturn": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.createManyAndReturn",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "data": [
+                        {
+                          "content": "content"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/create": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.createOne",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "data": {
+                        "content": "content"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/deleteMany": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.deleteMany",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/delete": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.deleteOne",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/findFirst": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.findFirst",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "orderBy": [
+                        {
+                          "id": "asc"
+                        }
+                      ],
+                      "take": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/findFirstOrThrow": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.findFirstOrThrow",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "orderBy": [
+                        {
+                          "id": "asc"
+                        }
+                      ],
+                      "take": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/findMany": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.findMany",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "orderBy": [
+                        {
+                          "id": "asc"
+                        }
+                      ],
+                      "take": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/findUnique": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.findUnique",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/findUniqueOrThrow": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.findUniqueOrThrow",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {
+                        "id": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/groupBy": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.groupBy",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "by": [
+                        "id"
+                      ],
+                      "orderBy": [
+                        {
+                          "id": "asc"
+                        }
+                      ],
+                      "_count": {
+                        "_all": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/updateMany": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.updateMany",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "data": {
+                        "content": "content"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/updateManyAndReturn": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.updateManyAndReturn",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "data": {
+                        "content": "content"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/update": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.updateOne",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {
+                        "id": 1
+                      },
+                      "data": {
+                        "content": "content"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/upsert": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.upsertOne",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {
+                        "id": 1
+                      },
+                      "update": {
+                        "content": "content"
+                      },
+                      "create": {
+                        "content": "content"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/trpc/todo/count": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "Todo.count",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "skeleton": {
+                  "value": {
+                    "input": {
+                      "where": {},
+                      "orderBy": [
+                        {
+                          "id": "asc"
+                        }
+                      ],
+                      "take": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Todo"
+    }
+  ]
+}

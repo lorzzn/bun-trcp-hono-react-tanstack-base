@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "turbo": "^2.5.8"
+  },
+  "name": "with-vite",
+  "packageManager": "bun@1.2.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

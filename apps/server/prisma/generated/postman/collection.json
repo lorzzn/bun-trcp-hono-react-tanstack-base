@@ -1,0 +1,547 @@
+{
+  "info": {
+    "name": "Prisma tRPC Generator",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Todo",
+      "item": [
+        {
+          "name": "Todo.aggregate",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.aggregate",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "aggregate"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"orderBy\": [\n      {\n        \"id\": \"asc\"\n      }\n    ],\n    \"take\": 10\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.createMany",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.createMany",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "createMany"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"data\": [\n      {\n        \"content\": \"content\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.createManyAndReturn",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.createManyAndReturn",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "createManyAndReturn"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"data\": [\n      {\n        \"content\": \"content\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.createOne",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.create",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"data\": {\n      \"content\": \"content\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.deleteMany",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.deleteMany",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "deleteMany"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.deleteOne",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.delete",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "delete"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {\n      \"id\": 1\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.findFirst",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.findFirst",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "findFirst"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"orderBy\": [\n      {\n        \"id\": \"asc\"\n      }\n    ],\n    \"take\": 1\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.findFirstOrThrow",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.findFirstOrThrow",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "findFirstOrThrow"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"orderBy\": [\n      {\n        \"id\": \"asc\"\n      }\n    ],\n    \"take\": 1\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.findMany",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.findMany",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "findMany"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"orderBy\": [\n      {\n        \"id\": \"asc\"\n      }\n    ],\n    \"take\": 10\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.findUnique",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.findUnique",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "findUnique"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {\n      \"id\": 1\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.findUniqueOrThrow",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.findUniqueOrThrow",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "findUniqueOrThrow"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {\n      \"id\": 1\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.groupBy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.groupBy",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "groupBy"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"by\": [\n      \"id\"\n    ],\n    \"orderBy\": [\n      {\n        \"id\": \"asc\"\n      }\n    ],\n    \"_count\": {\n      \"_all\": true\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.updateMany",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.updateMany",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "updateMany"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"data\": {\n      \"content\": \"content\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.updateManyAndReturn",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.updateManyAndReturn",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "updateManyAndReturn"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"data\": {\n      \"content\": \"content\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.updateOne",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.update",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "update"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {\n      \"id\": 1\n    },\n    \"data\": {\n      \"content\": \"content\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.upsertOne",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.upsert",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "upsert"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {\n      \"id\": 1\n    },\n    \"update\": {\n      \"content\": \"content\"\n    },\n    \"create\": {\n      \"content\": \"content\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Todo.count",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{TRPC_ENDPOINT}}/todo.count",
+              "host": [
+                "{{TRPC_ENDPOINT}}"
+              ],
+              "path": [
+                "todo",
+                "count"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": {\n    \"where\": {},\n    \"orderBy\": [\n      {\n        \"id\": \"asc\"\n      }\n    ],\n    \"take\": 10\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "TRPC_ENDPOINT",
+      "value": "http://localhost:3000/trpc",
+      "type": "string"
+    }
+  ]
+}

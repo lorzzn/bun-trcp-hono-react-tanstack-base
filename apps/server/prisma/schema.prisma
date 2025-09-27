@@ -1,0 +1,25 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator trpc {
+  provider = "prisma-trpc-generator"
+  output   = "./generated"
+  config   = "./trpc.config.json"
+}
+
+// generator trpc_shield {
+//   provider    = "prisma-trpc-shield-generator"
+//   contextPath = "../trpc/context"
+//   output      = "./generated/shield"
+// }
+
+model Todo {
+  id      Int    @id @default(autoincrement())
+  content String
+}
